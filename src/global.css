@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url(./assets/SourceSansPro-Light.ttf);
+}
+
+* {
+    scrollbar-color: #707070 #1f1f1f;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-color: #ececec; */
+    background-image: url(./assets/bg.jpg);
+    font-size: 25px;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    color: white;
+    background-color: #00ADB5;
+    height: 80px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 200px;
+    padding: auto;
+    align-items: center;
+    justify-content: center;
+}
+.navbar > h3 {
+    font-weight: 400;
+}
+
+#header {
+    margin-left: 50px;
+}
+
+.form-container {
+    border: 5px solid #00ADB5;
+    border-radius: 20px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: #373c42;
+    width: 60vw;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    border: 2px solid #333;
+    width: 400px;
+    height: 50px;
+    margin: 10px;
+    padding: 3px;
+    font-size: large;
+    border-radius: 5px;
+    background-color: #4a5058;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+.wrong-type {
+    border: 2px solid #8d0303;
+}
+
+button {
+    background-color: #3EB7D1;
+    color: white;
+    width: 150px;
+    height: 60px;
+    border-radius: 2%;
+    border: none;
+    margin-left: 10px;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(.1,-0.03,.91,1.03);
+    animation-name: button-animation;
+    font-size: 20px;
+}
+
+button:hover {
+    color: black;
+    background-color: #13b7db;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: scale(1.1);
+}
+
+@keyframes button-animation {
+    0% {transform: scale(1.0);}
+    25% {transform: scale(1.0033);}
+    50% {transform: scale(1.005);}
+    75% {transform: scale(1.0066);}
+    100% {transform: scale(1.01);}
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+#heading {
+    margin: 20px auto 20px auto;
+    color: #393E46;
+    text-align: center;
+    font-weight: 400;
+}
+
+.footer {
+    text-align: end;
+    color: black;
+}
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+}
+
+.form-heading {
+    color: white;
+    font-weight: 500;
+}
