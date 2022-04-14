@@ -6,6 +6,7 @@
 * {
     scrollbar-color: #707070 #1f1f1f;
 }
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* background-color: #ececec; */
@@ -15,26 +16,29 @@ body {
 }
 
 .navbar {
+    position: sticky;
     width: 100%;
     color: white;
     background-color: #00ADB5;
-    height: 80px;
+    height: 65px;
     top: 0;
     left: 0;
-    margin: 0;
+    margin: auto;
     display: flex;
     flex-flow: row wrap;
     gap: 200px;
-    padding: auto;
     align-items: center;
     justify-content: center;
 }
 .navbar > h3 {
     font-weight: 400;
+    margin-top: 10px;
 }
 
 #header {
     margin-left: 50px;
+    margin-right: auto;
+    align-self: flex-start;
 }
 
 .form-container {
@@ -43,14 +47,20 @@ body {
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     background-color: #373c42;
     width: 60vw;
-    margin: auto;
-    margin-top: 100px;
+    margin: 30px auto 30px auto;
     padding: 30px;
 }
-
-.input-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+@media (min-width: 1665px) {
+    .input-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 1665px) {
+    .input-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 input {
@@ -68,9 +78,8 @@ input:focus {
     outline: none;
 }
 
-
 .wrong-type {
-    border: 2px solid #8d0303;
+    border: 2px solid #9c0000;
 }
 
 button {
@@ -102,7 +111,6 @@ button:hover {
     100% {transform: scale(1.01);}
 }
 
-
 a {
     text-decoration: none;
     color: white;
@@ -115,7 +123,7 @@ a:visited {
 
 #heading {
     margin: 20px auto 20px auto;
-    color: #393E46;
+    color: white;
     text-align: center;
     font-weight: 400;
 }
@@ -123,11 +131,6 @@ a:visited {
 .footer {
     text-align: end;
     color: black;
-}
-
-.navbar-container {
-    position: sticky;
-    top: 0;
 }
 
 .form-heading {

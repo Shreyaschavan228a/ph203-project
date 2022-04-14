@@ -3,8 +3,8 @@ import { useState, useRef } from "react";
 import { suctionChamber } from "../lib/calcHelper";
 
 const SuctionChamber = () => {
-    const [throughput, setThroughput] = useState(null);
-    const [pumpingSpeed, setPumpingSpeed] = useState(null);
+    const [throughput, setThroughput] = useState('N/A');
+    const [pumpingSpeed, setPumpingSpeed] = useState('N/A');
     const input = useRef(null);
     const output = useRef(null);
     const suction_volume = useRef(null);
@@ -19,8 +19,7 @@ const SuctionChamber = () => {
             dead_space.current.value, 
             suction_volume.current.value
         );
-        console.log(values);
-        if(values === null){
+        if(isNaN(values[0]) || isNaN(values[1])){
             alert("Please input correct values");
         }
         else{
@@ -65,8 +64,8 @@ const SuctionChamber = () => {
             </div>
             <button onClick={()=>calculate()}>Calculate</button>
             <div>
-                <p>Throughput = {throughput ?? 'N/A'}</p>
-                <p>Pumping Speed = {pumpingSpeed ?? 'N/A'}</p>
+                <p>Throughput = {throughput}</p>
+                <p>Pumping Speed = {pumpingSpeed}</p>
             </div>
         </div>
     );

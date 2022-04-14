@@ -2,8 +2,8 @@ import React from "react";
 import { calculateGasEquation } from "../lib/calcHelper";
 import { useRef, useState } from "react";
 const GasEquation = () => {
-    const [throughput, setThroughput] = useState(null);
-    const [pumpingSpeed, setPumpingSpeed] = useState(null);
+    const [throughput, setThroughput] = useState('N/A');
+    const [pumpingSpeed, setPumpingSpeed] = useState('N/A');
     const mol = useRef(null);
     const pressure = useRef(null);
     const temp = useRef(null);
@@ -16,7 +16,7 @@ const GasEquation = () => {
             temp.current.value,
             time.current.value
         );
-        if (values === null) {
+        if (isNaN(values[0]) || isNaN(values[1])) {
             alert("Please input correct values");
         } else {
             setThroughput(values[0]);
