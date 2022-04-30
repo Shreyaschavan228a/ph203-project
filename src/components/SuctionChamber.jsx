@@ -64,8 +64,8 @@ const SuctionChamber = () => {
             </div>
             <button onClick={()=>calculate()}>Calculate</button>
             <div>
-                <p>Throughput = {throughput}</p>
-                <p>Pumping Speed = {pumpingSpeed}</p>
+                <p>Throughput = {throughput} J/s</p>
+                <p>Pumping Speed = {pumpingSpeed} m<sup>3</sup>/s</p>
             </div>
         </div>
     );

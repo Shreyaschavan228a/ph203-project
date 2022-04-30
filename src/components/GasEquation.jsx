@@ -8,6 +8,7 @@ const GasEquation = () => {
     const pressure = useRef(null);
     const temp = useRef(null);
     const time = useRef(null);
+    
 
     const calculate = () => {
         const values = calculateGasEquation(
@@ -58,8 +59,8 @@ const GasEquation = () => {
             </div>
             <button onClick={() => calculate()}>Calculate</button>
             <div>
-                <p>Throughput = {throughput ?? "N/A"}</p>
-                <p>Pumping Speed = {pumpingSpeed ?? "N/A"}</p>
+                <p>Throughput = {throughput ?? "N/A"} J/s</p>
+                <p>Pumping Speed = {pumpingSpeed ?? "N/A"} m<sup>3</sup>/s</p>
             </div>
         </div>
     );
